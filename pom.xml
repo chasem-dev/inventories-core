@@ -12,9 +12,9 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>test</name>
-            <url>https://maven.pkg.github.com/Xwaffle1/inventories-gg-plugin</url>
+            <id>dev.chasem</id>
+            <name>inventories-core</name>
+            <url>https://maven.pkg.github.com/Xwaffle1/inventories-core</url>
         </repository>
     </distributionManagement>
 
