@@ -10,8 +10,8 @@ on:
     branches: [ master ]
   workflow_dispatch:    
     inputs:
-      name:
-        description: 'description?'
+      java-version:
+        description: '8 or 17'
         required: false
 jobs:
   build:
@@ -23,14 +23,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 17
+    - name: Set up JDK
       uses: actions/setup-java@v2
       with:
         java-version: ${{ matrix.java-version }}
         distribution: 'adopt'
         cache: maven
     - name: Publish package
-      run: mvn --batch-mode deploy
+      run: mvn --batch-mode deploy -Dversion=1.0.0-Java-${{ matrix.java-version }}
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         JAVA_VERSION: ${{ matrix.java-version }}
