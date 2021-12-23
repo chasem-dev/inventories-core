@@ -6,7 +6,7 @@
 
     <groupId>dev.chasem</groupId>
     <artifactId>inventories-core</artifactId>
-    <version>${revision}</version>
+    <version>1.0.0-SNAPSHOT-Java-${env.JAVA_VERSION}</version>
     <packaging>jar</packaging>
     <name>inventories.gg</name>
 
