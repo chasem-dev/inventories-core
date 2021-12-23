@@ -6,7 +6,7 @@
 
     <groupId>dev.chasem</groupId>
     <artifactId>inventories-core</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>jar</packaging>
     <name>inventories.gg</name>
 
@@ -22,6 +22,7 @@
     <properties>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <revision>1.0.0-SNAPSHOT</revision>
     </properties>
 
     <build>
