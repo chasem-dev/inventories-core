@@ -20,9 +20,9 @@
 
 
     <properties>
-        <java.version>${env.java-version}</java.version>
+        <java.version>${env.JAVA_VERSION}</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <revision>1.0.0-SNAPSHOT-Java-${java.version}</revision>
+        <revision>1.0.0-SNAPSHOT-Java-${env.JAVA_VERSION}</revision>
     </properties>
 
     <build>
