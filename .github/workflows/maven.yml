@@ -17,16 +17,20 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [ 8, 17 ]
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 17
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: ${{ matrix.java-version }}
         distribution: 'adopt'
         cache: maven
     - name: Publish package
       run: mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        JAVA_VERSION: ${{ matrix.java-version }}
