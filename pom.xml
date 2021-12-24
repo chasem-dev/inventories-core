@@ -33,10 +33,11 @@
                 <jdk>17</jdk>
             </activation>
             <properties>
-                <profile.version>${build.version}-jdk17</profile.version>
+                <profile.version>${build.version}</profile.version>
             </properties>
 
             <build>
+                <finalName>${build.version}-jdk17</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -79,9 +80,10 @@
                 <jdk>8</jdk>
             </activation>
             <properties>
-                <profile.version>${build.version}-jdk8</profile.version>
+                <profile.version>${build.version}</profile.version>
             </properties>
             <build>
+                <finalName>${build.version}-jdk8</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
