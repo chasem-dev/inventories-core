@@ -30,7 +30,6 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Publish package
-      run: mvn --batch-mode deploy -Dclassifier=jdk${{ matrix.java-version }}
+      run: mvn --batch-mode deploy -Pjdk${{ matrix.java-version }}
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        JAVA_VERSION: ${{ matrix.java-version }}
