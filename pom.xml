@@ -6,8 +6,8 @@
 
     <groupId>dev.chasem</groupId>
     <artifactId>inventories-core</artifactId>
-<!--    <version>1.0.0-SNAPSHOT</version>-->
-    <version>${profile.version}</version>
+    <version>1.0.1-SNAPSHOT</version>
+<!--    <version>${profile.version}</version>-->
     <packaging>jar</packaging>
     <name>inventories.gg</name>
 
@@ -21,7 +21,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <build.version>1.0.1-SNAPSHOT</build.version>
     </properties>
 
 
@@ -33,11 +32,11 @@
                 <jdk>17</jdk>
             </activation>
             <properties>
-                <profile.version>${build.version}</profile.version>
+<!--                <profile.version>${build.version}</profile.version>-->
             </properties>
 
             <build>
-                <finalName>${build.version}-jdk17</finalName>
+                <finalName>${version}-jdk17</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -80,10 +79,10 @@
                 <jdk>8</jdk>
             </activation>
             <properties>
-                <profile.version>${build.version}</profile.version>
+<!--                <profile.version>${build.version}</profile.version>-->
             </properties>
             <build>
-                <finalName>${build.version}-jdk8</finalName>
+                <finalName>${version}-jdk8</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
