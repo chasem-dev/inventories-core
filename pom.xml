@@ -36,7 +36,7 @@
             </properties>
 
             <build>
-                <finalName>${version}-jdk17</finalName>
+<!--                <finalName>${version}-jdk17</finalName>-->
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -82,13 +82,14 @@
 <!--                <profile.version>${build.version}</profile.version>-->
             </properties>
             <build>
-                <finalName>${version}-jdk8</finalName>
+<!--                <finalName>${version}-jdk8</finalName>-->
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
                         <version>3.8.1</version>
                         <configuration>
+<!--                            <classifier>jdk8</classifier>-->
                             <source>8</source>
                             <target>8</target>
                         </configuration>
@@ -104,6 +105,8 @@
                                     <goal>shade</goal>
                                 </goals>
                                 <configuration>
+                                    <shadedArtifactAttached>true</shadedArtifactAttached>
+                                    <shadedClassifierName>jdk8</shadedClassifierName>
                                     <createDependencyReducedPom>false</createDependencyReducedPom>
                                 </configuration>
                             </execution>
