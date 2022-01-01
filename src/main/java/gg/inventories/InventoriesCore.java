@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 
 public class InventoriesCore {
     private static String CLIENT_SECRET = null;
-            public static String API_URL = "http://localhost:3000/api";
-//    public static String API_URL = "https://inventories-gg.vercel.app/api";
+//            public static String API_URL = "http://localhost:3000/api";
+    public static String API_URL = "https://inventories.chasem.dev/api";
 
     public static Logger getLogger() {
         return Logger.getLogger("InventoriesCore");
@@ -46,7 +46,7 @@ public class InventoriesCore {
             }else if(response.getStatusLine().getStatusCode() == 404){
                 getLogger().warning(response.getStatusLine().getStatusCode() + " - " + response.getStatusLine().getReasonPhrase());
                 getLogger().warning("No server was found matching your configured clientSecret.");
-                getLogger().warning("Navigate to your dashboard and copy your clientSecret. https://inventories-gg.vercel.app/dashboard");
+                getLogger().warning("Navigate to your dashboard and copy your clientSecret. https://inventories.chasem.dev/dashboard");
             }else if(response.getStatusLine().getStatusCode() != 200){
                 getLogger().warning("Error when syncing playerData.");
                 getLogger().warning(response.getStatusLine().getStatusCode() + " - " + response.getStatusLine().getReasonPhrase());
